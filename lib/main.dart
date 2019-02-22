@@ -29,6 +29,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var nome = 'João de Mello';
   int _counter = 0;
 
   void _incrementCounter() {
@@ -71,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // var res = await SimplePermissions.requestPermission(Permission. WriteExternalStorage);
 
     var htmlContent = """
-   <!DOCTYPE html>
+    <!DOCTYPE html>
     <html>
       <head>
         <style>
@@ -180,7 +181,7 @@ class _MyHomePageState extends State<MyHomePage> {
               >
               <br />
               <span style="font-size: 18px; margin-left: 5px"
-                >Nome do Funcionário</span
+                >'${nome.toString()}'</span
               >
             </td>
           </tr>
@@ -317,7 +318,7 @@ class _MyHomePageState extends State<MyHomePage> {
         </table>
     
         <!--Tabela 5. Rendimentos sujeitos à Tributação Exclusiva (rendimento líquido)-->
-        <table style="width: 100%; margin-top: 15px; border: none">
+        <table style="width: 100%; margin-top: 15px; border: none;">
           <tr>
             <th
               style="text-align: left; border: none; font-size: 14px; width: 80%;"
@@ -351,7 +352,7 @@ class _MyHomePageState extends State<MyHomePage> {
     
         <!--Tabela 6. Rendimentos Recebidos Acumulados - Art. 12-A da Lei nº 7.713, de
               1988 (sujeito à tributação exclusiva)-->
-        <table style="width: 100%; margin-top: 15px; border: none">
+        <table style="width: 100%; margin-top: 15px; border: none; margin-top:120px">
           <tr>
             <th style="text-align: left; border: none; font-size: 14px;">
               6. Rendimentos Recebidos Acumulados - Art. 12-A da Lei nº 7.713, de
@@ -373,14 +374,11 @@ class _MyHomePageState extends State<MyHomePage> {
             <td style="text-align: left; font-size: 16px;" colspan="1">
               Natureza do Rendimento:
             </td>
-            <td style="text-align: right; font-size: 16px;" colspan="2">
+            <td style="text-align: right; font-size: 16px;" colspan="1">
               Valores em reais
             </td>
           </tr>
-        </table>
     
-        <!--Tabela 6 continuação da tabela-->
-        <table style="width: 100%;">
           <tr>
             <td style="text-align: left; font-size: 14px; width: 70%">
               01. Total dos rendimentos tributáveis (inclusive férias e décimo
@@ -426,6 +424,54 @@ class _MyHomePageState extends State<MyHomePage> {
             <td style="text-align: right; width: 30%">0,00</td>
           </tr>
         </table>
+    
+        <!--Tabela 6 continuação da tabela-->
+        <!-- <table style="width: 100%;">
+          <tr>
+            <td style="text-align: left; font-size: 14px; width: 70%">
+              01. Total dos rendimentos tributáveis (inclusive férias e décimo
+              terceiro salário)
+            </td>
+            <td style="text-align: right; width: 30%">0,00</td>
+          </tr>
+    
+          <tr>
+            <td style="text-align: left; font-size: 14px; width: 70%">
+              02. Exclusão: Despesas com a ação judicial:
+            </td>
+            <td style="text-align: right; width: 30%">0,00</td>
+          </tr>
+    
+          <tr>
+            <td style="text-align: left; font-size: 14px; width: 70%">
+              03. Dedução: Contribuição previdenciária oficial
+            </td>
+            <td style="text-align: right; width: 30%">0,00</td>
+          </tr>
+    
+          <tr>
+            <td style="text-align: left; font-size: 14px; width: 70%">
+              04. Dedução: Pensão alimenticia <b>preencher também o quadro 7</b>
+            </td>
+            <td style="text-align: right; width: 30%">0,00</td>
+          </tr>
+    
+          <tr>
+            <td style="text-align: left; font-size: 14px; width: 70%">
+              05. Imposto sobre a renda na fonte
+            </td>
+            <td style="text-align: right; width: 30%">0,00</td>
+          </tr>
+    
+          <tr>
+            <td style="text-align: left; font-size: 14px; width: 70%">
+              06. Rendimentos isentos de pensão, proventos, de aposentadoria ou
+              reforma por moléstia grave e ou aposentadoria ou reforma por acidente
+              em serviço
+            </td>
+            <td style="text-align: right; width: 30%">0,00</td>
+          </tr>
+        </table> -->
     
         <!--Tabela 7. Informações Complementares-->
         <table style="width: 100%; margin-top: 50px; border: none">
